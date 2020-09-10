@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="dragAndDrop.css">
+    <title>Drag and drop</title>
+</head>
+<body>
+
+<div id="firstDiv" class = "dragAndDrop" ondragenter = "dragEnter(event)" ondragleave = "dragLeave(event)" ondrop = "drop(event)" ondragover = "allowDrop(event)">
+    <div ondragstart = "dragStart(event)" draggable = "true" id ="dropDiv">
+        <form action="dragAndDrop.php" method="post" class="form" id="form">
+            <p>Форма</p>
+            <div><label><input type="text" placeholder="Имя" name="name" minlength="5" maxlength="15"></label></div>
+            <div><label><input type="email" placeholder="Емейл" name="email"></label></div>
+            <div><label><input type="text" pattern="^[0-9]+$" name="phone" placeholder="Телефон"></label></div>
+            <div><label><input type="submit" class="button" value="Отправит!"></label></div>
+        </form>
+    </div>
+</div>
+<div id="secondDiv" class = "dragAndDrop" ondragenter = "dragEnter(event)" ondragleave = "dragLeave(event)" ondrop = "drop(event)" ondragover = "allowDrop(event)"></div>
+<p id = "info"></p>
+<script src="dragAndDrop.js"></script>
+</body>
+</html>
