@@ -11,10 +11,17 @@
     <div ondragstart = "dragStart(event)" draggable = "true" id ="dropDiv">
         <form action="dragAndDrop.php" method="post" class="form" id="form">
             <p>Форма</p>
-            <div><label><input type="text" placeholder="Имя" name="name" minlength="5" maxlength="15"></label></div>
-            <div><label><input type="email" placeholder="Емейл" name="email"></label></div>
-            <div><label><input type="text" pattern="^[0-9]+$" name="phone" placeholder="Телефон"></label></div>
-            <div><label><input type="submit" class="button" value="Отправит!"></label></div>
+            <div><label><input type="text" placeholder="Имя" name="name" id="name" minlength="5" maxlength="15"></label>
+                <span id="nameError"></span>
+            </div>
+            <div><label><input type="email" placeholder="Емейл" name="email" id="email"></label>
+                <span id="emailError"></span>
+            </div>
+            <div><label><input type="text" pattern="^[0-9]+$" name="phone" id="phone" placeholder="Телефон"></label>
+                <span id="phoneError"></span>
+            </div>
+            <div><label><input type="submit" class="button" value="Отправит!"></label>
+            </div>
         </form>
     </div>
 </div>
